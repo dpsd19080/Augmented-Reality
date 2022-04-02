@@ -20,8 +20,40 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-        <a-marker preset="hiro">
-            <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2" position="0 0 0" material="color: #4CC3D9"></a-entity>
+        <a-marker preset="hiro"> 
+            <!-- important for speech command -->
+            <a-entity id="annyang" annyang-speech-recognition></a-entity>
+
+            <!-- snow with speech command -->
+            <a-entity  id="snow" position="0 0 0" particle-system="preset: snow; size: 5; particleCount: 4000" speech-command__show="command: start; type: attribute; attribute: visible; value: true;" 
+            speech-command__hide="command: stop; type: attribute; attribute: visible; value: false;"></a-entity>
+
+            <!-- skate's deck  -->
+            <a-entity id="box" geometry="primitive: box; width: 4; depth: 1; height: 0.1" position="0 0 0" material="color: #CC9966"></a-entity>
+
+            <!-- skate's trucks  -->
+            <a-entity id="box" geometry="primitive: box; width: 0.5; depth: 0.5; height: 0.1" position="1.2 0.1 0" material="color: #6D6D6D"></a-entity>
+            <a-entity id="box" geometry="primitive: box; width: 0.5; depth: 0.5; height: 0.1" position="-1.2 0.1 0" material="color: #6D6D6D"></a-entity>
+
+            <a-cylinder  position="1.4 0.2 0" radius="0.1" height="0.2" color="#171717"></a-cylinder>
+            <a-cylinder  position="-1.4 0.2 0" radius="0.1" height="0.2" color="#171717"></a-cylinder>
+
+            <a-entity id="box" geometry="primitive: box; width: 0.1; depth: 0.6; height: 0.1" position="1.4 0.35 0" material="color: #6D6D6D"></a-entity>
+            <a-entity id="box" geometry="primitive: box; width: 0.1; depth: 0.6; height: 0.1" position="-1.4 0.35 0" material="color: #6D6D6D"></a-entity>
+
+            <!--<a-cylinder  position="1.4 0.2 0" radius="0.1" height="0.2" color="#151515" rotate="45"></a-cylinder> -->
+            
+            <!-- skate's wheels  -->
+            <a-sphere id="sphere" position="1.4 0.35 0.4" radius="0.15" color="#EF2D5E"></a-sphere>
+            <a-sphere id="sphere" position="-1.4 0.35 0.4" radius="0.15" color="#EF2D5E"></a-sphere>
+            <a-sphere id="sphere" position="1.4 0.35 -0.4" radius="0.15" color="#EF2D5E"></a-sphere>
+            <a-sphere id="sphere" position="-1.4 0.35 -0.4" radius="0.15" color="#EF2D5E"></a-sphere>
+           
+           <!-- <a-text position="-1 0.5 -1.5" align="center" value="S k a t e" color="black"></a-text> -->
+            <a-text position="1 0.5 -1.5" align="center" value="S a y  S t a r t  /  S a y  S t o p" color="black"></a-text>
+            
+
+            
         </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
