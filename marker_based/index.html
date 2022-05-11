@@ -59,27 +59,28 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
 
-  <a-entity marker-distance></a-entity>
-    
+  
   <a-marker type="pattern" url="assets/pattern-dpsd19080Marker.patt"> 
         <a-text value="Andrew Birmpilis" position="-0.8 1.4 0"></a-text>
         <a-image src="assets/flashaki.png" position="0 0.6 0"></a-image>
   </a-marker>
 
+<a-entity marker-distance></a-entity>
+
 <a-asset>
-  <a-asset-item id="hydrogen" src="assets/hydrogen_dpsd19080.gltf"></a-asset-item>
-  <a-asset-item id="water" src="assets/water_dpsd19080.gltf"></a-asset-item>
+  <a-asset-item  src="assets/hydrogen_dpsd19080.gltf"></a-asset-item>
+  <a-asset-item  src="assets/water_dpsd19080.gltf"></a-asset-item>
 </a-asset>
 
   <a-marker id="marker1" type="pattern" url="assets/pattern-card-H.patt"> 
-    <a-entity gltf-model="#hydrogen" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000 easing: linear;"></a-entity>
-    <a-entity gltf-model="#water" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000 easing: linear;"></a-entity>
+    <a-entity id="hydrogen" gltf-model="#hydrogen" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000 easing: linear;"></a-entity>
+    <a-entity id="water" gltf-model="#water" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000 easing: linear;"></a-entity>
   </a-marker>
 
-  <a-asset-item id="oxygen" src="assets/oxygen_dpsd19080.gltf"></a-asset-item>
+  <a-asset-item  src="assets/oxygen_dpsd19080.gltf"></a-asset-item>
 
   <a-marker id="marker2" type="pattern" url="assets/pattern-card-O.patt"> 
-    <a-entity gltf-model="#oxygen" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000 easing: linear;"></a-entity>
+    <a-entity id="oxygen" gltf-model="#oxygen" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000 easing: linear;"></a-entity>
   </a-marker>
  
 
