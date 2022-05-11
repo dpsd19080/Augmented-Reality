@@ -14,6 +14,44 @@
     
 
     <body style="margin : 0px; overflow: hidden;">
+     <!-- Deliverable 2 -->
+        <script>
+            AFRAME.registerComponent("marker-distance", {
+
+                init: function () {
+                this.hydrogen = document.querySelector('#hydrogen')
+                this.oxygen = document.querySelector('#oxygen')
+                this.water = document.querySelector('#water')
+                this.marker1 = document.querySelector('#marker1')
+                this.marker2 = document.querySelector('#marker2')
+            },
+            tick: function() 
+            {
+                var marker1Pos, marker2Pos, markerDistance 
+
+                marker1Pos = new THREE.Vector3();
+                this.marker1.object3D.getWorldPosition(marker1Pos);
+
+                marker2Pos = new THREE.Vector3();
+                this.marker2.object3D.getWorldPosition(marker2Pos);
+
+                markerDistance = marker1Pos.distanceTo(marker2Pos);
+
+                if (markerDistance<2) 
+                {
+                    this.hydrogen.setAttribute("visible", false)
+                    this.oxygen.setAttribute("visible", false)
+                    this.water.setAttribute("visible", true)
+                }
+                else 
+                {
+                    this.hydrogen.setAttribute("visible",true) 
+                    this.oxygen.setAttribute("visible",true) 
+                    this.water.setAttribute("visible", false)
+                }
+            },
+        });
+        </script>
         <a-scene
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true;"
@@ -21,24 +59,27 @@
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
 
-     <!-- Deliverable 2 -->
+    
   <a-marker type="pattern" url="assets/pattern-dpsd19080Marker.patt"> 
         <a-text value="Andrew Birmpilis" position="-0.8 1.4 0"></a-text>
         <a-image src="assets/flashaki.png" position="0 0.6 0"></a-image>
   </a-marker>
 
   <a-asset-item id="hydrogen" src="assets/hydrogen_dpsd19080.gltf"></a-asset-item>
+  <a-asset-item id="water" src="assets/water_dpsd19080.gltf"></a-asset-item>
 
-  <a-marker type="pattern" url="assets/pattern-card-H.patt"> 
+  <a-marker id="marker1" type="pattern" url="assets/pattern-card-H.patt"> 
     <a-entity gltf-model="#hydrogen" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000 easing: linear;"></a-entity>
+    <a-entity gltf-model="#water" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000 easing: linear;"></a-entity>
   </a-marker>
 
   <a-asset-item id="oxygen" src="assets/oxygen_dpsd19080.gltf"></a-asset-item>
 
-  <a-marker type="pattern" url="assets/pattern-card-O.patt"> 
+  <a-marker id="marker2" type="pattern" url="assets/pattern-card-O.patt"> 
     <a-entity gltf-model="#oxygen" scale= "0.7 0.7 0.7"  position="0 0.6 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000 easing: linear;"></a-entity>
   </a-marker>
-
+ 
+  <a-entity marker-distance></a-entity>
 
     <!-- Deliverable 1 -->
         <a-marker preset="hiro"> 
