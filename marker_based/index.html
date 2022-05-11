@@ -20,6 +20,12 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
+
+  <a-marker type="pattern" url="assets/pattern-dpsd19080Marker.patt"> 
+        <a-text value="Tsimpoukia o EDGY" position="0 1.4 0"></a-text>
+        <a-image src="assets/flashaki.png" position="0 0.6 0"></a-image>
+  </a-marker>
+  
         <a-marker preset="hiro"> 
             <!-- important for speech command -->
             <a-entity id="annyang" annyang-speech-recognition></a-entity>
