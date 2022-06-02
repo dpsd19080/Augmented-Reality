@@ -43,7 +43,8 @@
  ![ScreenShot](call_java.jpg)
 
 # 3rd Deliverable 
-
+Στο τελευταίο παραδοτέο ξεκίνησα να ασχολούμε πρώτα με το syros.html. Σκοπός ήταν να εμφανίζεται ένα 3D μοντέλο σε συγκεκρίμενο γεωγραφικό σημείο της Σύρου. Αρχικά, βρήκα ένα έτοιμο μοντέλο που μου άρεσε στο [Sketchfab](https://sketchfab.com/) και πιο συγκεκριμένα αυτό: [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e) Έπειτα, άνοιξα και επεξεργάστικα το μοντέλο στο Blender με σκοπό να το προσαρμόσω στα δεδομένα της εργασίας (κυρίως να το αποθηκεύσω σε gltf και να φτιάξω λίγο κάποια textures):
+ ![ScreenShot](spidey_syros_model_screenshot.jpg)
 
 # Conclusions
 
@@ -60,3 +61,7 @@
 - [A-FRAME | How To Do Web VR Animations](https://www.youtube.com/watch?v=ZGk5XlPscsk&t=482s)
 - [How to get marker position (x,y) AR.js](https://stackoverflow.com/questions/61239107/how-to-get-marker-position-x-y-ar-js?fbclid=IwAR1Sn5znFMi_lntPM_S7T3aLX5rdjE2Fj5HIk7CQtOUiaG6ZdR-dc5mFcss)
 - [AR.js-examples](https://github.com/stemkoski/AR.js-examples)
+
+#### 1st Deliverable:
+- [Sketchfab](https://sketchfab.com/)
+- [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e)
