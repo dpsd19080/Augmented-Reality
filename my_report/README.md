@@ -46,6 +46,7 @@
 Στο τελευταίο παραδοτέο ξεκίνησα να ασχολούμαι πρώτα με το syros.html. Σκοπός ήταν να εμφανίζεται ένα 3D μοντέλο σε συγκεκρίμενο γεωγραφικό σημείο της Σύρου. Αρχικά, βρήκα ένα έτοιμο μοντέλο που μου άρεσε στο [Sketchfab](https://sketchfab.com/) και πιο συγκεκριμένα αυτό: [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e) Έπειτα, άνοιξα και επεξεργάστικα το μοντέλο στο Blender με σκοπό να το προσαρμόσω στα δεδομένα της εργασίας (κυρίως να το αποθηκεύσω σε gltf και να φτιάξω λίγο κάποια textures):
  ![ScreenShot](spidey_syros_model_screenshot.jpg)
  Τέλος, αντικατέστησα τις συντεταγμένες και το μοντέλο με αυτά που ήθελα! 
+ ![ScreenShot](syros_code.jpg)
  
 
 # Conclusions
