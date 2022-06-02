@@ -62,6 +62,6 @@
 - [How to get marker position (x,y) AR.js](https://stackoverflow.com/questions/61239107/how-to-get-marker-position-x-y-ar-js?fbclid=IwAR1Sn5znFMi_lntPM_S7T3aLX5rdjE2Fj5HIk7CQtOUiaG6ZdR-dc5mFcss)
 - [AR.js-examples](https://github.com/stemkoski/AR.js-examples)
 
-#### 1st Deliverable:
+#### 3st Deliverable:
 - [Sketchfab](https://sketchfab.com/)
 - [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e)
