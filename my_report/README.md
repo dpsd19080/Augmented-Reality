@@ -48,9 +48,11 @@
  Τέλος, αντικατέστησα τις συντεταγμένες και το μοντέλο με αυτά που ήθελα! 
  ![ScreenShot](syros_code.jpg)
  
- Τώρα, για να ολοκληρώσω το παραδοτέο (και επίσημα την ατομική εργασία) έμενε να τροποποιήσω κατάλληλα το index.html ώστε να εμφανίζεται ένα 3D μοντέλο (κατα προτήμηση με animation) και όταν το κλικάρω να εμφανίζει/εξαφανίζει κείμενο. Επιπλέον, έπρεπε να αλλάξω τις συντεταγμένες για το μοντέλο και την κάμερα σε μια μακρινή τοποθεσία.
+ Τώρα, για να ολοκληρώσω το παραδοτέο (και επίσημα την ατομική εργασία) έμενε να τροποποιήσω κατάλληλα το index.html ώστε να εμφανίζεται ένα 3D μοντέλο (κατά προτίμηση με animation) και όταν το κλικάρω να εμφανίζει/εξαφανίζει κείμενο. Επιπλέον, έπρεπε να αλλάξω τις συντεταγμένες για το μοντέλο και την κάμερα σε μια μακρινή τοποθεσία.
 Όπως και στο syros.html, έτσι και εδώ βρήκα έτοιμο μοντέλο και animation: [Spiderman Blender Animation](https://illusionb3d.gumroad.com/l/ChNfG) και το προσάρμοσα στα δεδομένα της εργασίας. ![Alt Text](https://github.com/dpsd19080/Augmented-Reality/blob/main/my_report/spideygif.gif)
-Στην συνέχεια, επέλεξα ένα μακρινό γεωραφικό μέρος ώστε να αλλάξω τις συντεταγμένες και στο a-entity και a-camera 
+Στην συνέχεια, επέλεξα ένα μακρινό γεωγραφικό μέρος ώστε να αλλάξω τις συντεταγμένες στο "a-entity" και "a-camera" αντίστοιχα και πρόσθεσα το 3D μοντέλο που βρήκα μαζί με το animation. 
+
+#### Σημείωση 1: Το animation είναι φτιαγμένο με το Blender. Για να δουλέψει χρειάστηκε το συγκεκριμένο script, το οποίο παρατήρησα πως χρησιμοποιείται εδώ: [A-frame pause/play animation mixer](https://stackoverflow.com/questions/70735151/a-frame-pause-play-animation-mixer)
  
 
 # Conclusions
@@ -74,3 +76,4 @@
 - [Sketchfab](https://sketchfab.com/)
 - [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e)
 - [Spiderman Blender Animation](https://illusionb3d.gumroad.com/l/ChNfG)
+- [A-frame pause/play animation mixer](https://stackoverflow.com/questions/70735151/a-frame-pause-play-animation-mixer)
