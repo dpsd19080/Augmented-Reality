@@ -8,6 +8,10 @@
 # Introduction
 
 # Summary
+Η ατομική εργασία χωρίζεται σε τρεία παραδοτέα:
+#### 1st Deliverable:
+#### 2st Deliverable:
+#### 3st Deliverable:
 
 
 # 1st Deliverable
@@ -43,16 +47,23 @@
  ![ScreenShot](call_java.jpg)
 
 # 3rd Deliverable 
-Στο τελευταίο παραδοτέο ξεκίνησα να ασχολούμαι πρώτα με το syros.html. Σκοπός ήταν να εμφανίζεται ένα 3D μοντέλο σε συγκεκρίμενο γεωγραφικό σημείο της Σύρου. Αρχικά, βρήκα ένα έτοιμο μοντέλο που μου άρεσε στο [Sketchfab](https://sketchfab.com/) και πιο συγκεκριμένα αυτό: [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e) Έπειτα, άνοιξα και επεξεργάστικα το μοντέλο στο Blender με σκοπό να το προσαρμόσω στα δεδομένα της εργασίας (κυρίως να το αποθηκεύσω σε gltf και να φτιάξω λίγο κάποια textures):
+Στο τελευταίο παραδοτέο ξεκίνησα να ασχολούμαι πρώτα με το syros.html. Σκοπός ήταν να εμφανίζεται ένα 3D μοντέλο σε συγκεκριμένο γεωγραφικό σημείο της Σύρου. Αρχικά, βρήκα ένα έτοιμο μοντέλο που μου άρεσε στο [Sketchfab](https://sketchfab.com/) και πιο συγκεκριμένα αυτό: [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e) Έπειτα, άνοιξα και επεξεργάστηκα το μοντέλο στο Blender με σκοπό να το προσαρμόσω στα δεδομένα της εργασίας (κυρίως να το αποθηκεύσω σε gltf και να φτιάξω λίγο κάποια textures):
  ![ScreenShot](spidey_syros_model_screenshot.jpg)
  Τέλος, αντικατέστησα τις συντεταγμένες και το μοντέλο με αυτά που ήθελα! 
  ![ScreenShot](syros_code.jpg)
  
  Τώρα, για να ολοκληρώσω το παραδοτέο (και επίσημα την ατομική εργασία) έμενε να τροποποιήσω κατάλληλα το index.html ώστε να εμφανίζεται ένα 3D μοντέλο (κατά προτίμηση με animation) και όταν το κλικάρω να εμφανίζει/εξαφανίζει κείμενο. Επιπλέον, έπρεπε να αλλάξω τις συντεταγμένες για το μοντέλο και την κάμερα σε μια μακρινή τοποθεσία.
 Όπως και στο syros.html, έτσι και εδώ βρήκα έτοιμο μοντέλο και animation: [Spiderman Blender Animation](https://illusionb3d.gumroad.com/l/ChNfG) και το προσάρμοσα στα δεδομένα της εργασίας. ![Alt Text](https://github.com/dpsd19080/Augmented-Reality/blob/main/my_report/spideygif.gif)
-Στην συνέχεια, επέλεξα ένα μακρινό γεωγραφικό μέρος ώστε να αλλάξω τις συντεταγμένες στο "a-entity" και "a-camera" αντίστοιχα και πρόσθεσα το 3D μοντέλο που βρήκα μαζί με το animation. 
+Στην συνέχεια, επέλεξα ένα μακρινό γεωγραφικό μέρος ώστε να αλλάξω τις συντεταγμένες στο "a-entity" και "a-camera" αντίστοιχα, πρόσθεσα το 3D μοντέλο που βρήκα μαζί με το animation, το κείμενο και μία εικόνα.
+ ![ScreenShot](Animation_text_photo_code.jpg)
 
-#### Σημείωση 1: Το animation είναι φτιαγμένο με το Blender. Για να δουλέψει χρειάστηκε το συγκεκριμένο script, το οποίο παρατήρησα πως χρησιμοποιείται εδώ: [A-frame pause/play animation mixer](https://stackoverflow.com/questions/70735151/a-frame-pause-play-animation-mixer)
+#### Σημείωση 1: Στο Screenshot μπορούμε να δούμε πως στα "a-entity", "a-text" και "a-image" (που αφορούν το Animartion, text και image) υπάρχουν classes με όνομα "click" και "clickable". Βρίσκονται εκεί επειδή "συνδέονται" με το script που είναι υπεύθυνο για το click event. Θα μιλήσω αναλυτικότερα για αυτό το script παρακάτω. 
+
+#### Σημείωση 2: Το animation είναι φτιαγμένο με το Blender. Για να δουλέψει χρειάστηκε το συγκεκριμένο script, το οποίο παρατήρησα πως χρησιμοποιείται εδώ: [A-frame pause/play animation mixer](https://stackoverflow.com/questions/70735151/a-frame-pause-play-animation-mixer)
+ ![ScreenShot](animation_script.jpg)
+
+
+Έχοντας πλέον έτοιμο το μοντέλο με το κείμενο και την εικόνα, έμενε να γράψω το script για το click event. Δηλαδή, όταν κλικάρω πάνω στο μοντέλο να εμφανίζεται/εξαφανίζεται το κείμενο και η εικόνα. Αυτό το κατάφερα ήστερα απο μελέτη του κώδικα του [salty-partner-1](https://glitch.com/~salty-partner-1) 
  
 
 # Conclusions
@@ -77,3 +88,5 @@
 - [The Amazing Spider Man 2 Rigged Model](https://sketchfab.com/3d-models/the-amazing-spider-man-2-rigged-model-fd9385343d14477a979d0269b3015e1e)
 - [Spiderman Blender Animation](https://illusionb3d.gumroad.com/l/ChNfG)
 - [A-frame pause/play animation mixer](https://stackoverflow.com/questions/70735151/a-frame-pause-play-animation-mixer)
+- [salty-partner-1](https://glitch.com/~salty-partner-1) 
+ 
