@@ -6,9 +6,9 @@
 ### Augmented Reality Personal Repository: [URL](https://github.com/dpsd19080/Augmented-Reality)
 
 # Introduction
-Στα πλαίσια του μαθήματος "Διακρατική Σχεδίαση" καλούμε να πραγματοποιήσω μια ατομική εργασία η οποία αντιστοιχεί στο 50% του τελικού μου βαθμού. 
+Στα πλαίσια του μαθήματος "Διακρατική Σχεδίαση" καλούμε να υλοποιήσω μια ατομική εργασία με θέμα την επαυξημένη πραγματικότητα, η οποία αντιστοιχεί στο 50% του τελικού μου βαθμού. 
 # Summary
-Η ατομική εργασία χωρίζεται σε τρεία παραδοτέα:
+Η ατομική εργασία χωρίζεται σε τρία παραδοτέα: 
 #### 1st Deliverable:
 #### 2st Deliverable:
 #### 3st Deliverable:
@@ -53,19 +53,26 @@
  ![ScreenShot](syros_code.jpg)
  
  Τώρα, για να ολοκληρώσω το παραδοτέο (και επίσημα την ατομική εργασία) έμενε να τροποποιήσω κατάλληλα το index.html ώστε να εμφανίζεται ένα 3D μοντέλο (κατά προτίμηση με animation) και όταν το κλικάρω να εμφανίζει/εξαφανίζει κείμενο. Επιπλέον, έπρεπε να αλλάξω τις συντεταγμένες για το μοντέλο και την κάμερα σε μια μακρινή τοποθεσία.
-Όπως και στο syros.html, έτσι και εδώ βρήκα έτοιμο μοντέλο και animation: [Spiderman Blender Animation](https://illusionb3d.gumroad.com/l/ChNfG) και το προσάρμοσα στα δεδομένα της εργασίας. ![Alt Text](https://github.com/dpsd19080/Augmented-Reality/blob/main/my_report/spideygif.gif)
-Στην συνέχεια, επέλεξα ένα μακρινό γεωγραφικό μέρος ώστε να αλλάξω τις συντεταγμένες στο "a-entity" και "a-camera" αντίστοιχα, πρόσθεσα το 3D μοντέλο που βρήκα μαζί με το animation, το κείμενο και μία εικόνα.
+Όπως και στο syros.html, έτσι και εδώ βρήκα έτοιμο μοντέλο, animation: [Spiderman Blender Animation](https://illusionb3d.gumroad.com/l/ChNfG) και το προσάρμοσα στα δεδομένα της εργασίας. ![Alt Text](https://github.com/dpsd19080/Augmented-Reality/blob/main/my_report/spideygif.gif)
+Στην συνέχεια, επέλεξα ένα μακρινό γεωγραφικό μέρος ώστε να αλλάξω τις συντεταγμένες στο "a-entity" και "a-camera" αντίστοιχα. Πρόσθεσα επίσης το 3D μοντέλο που βρήκα μαζί με το animation, το κείμενο και μία εικόνα.
  ![ScreenShot](Animation_text_photo_code.jpg)
 
 #### Σημείωση 1: Στο Screenshot, το "a-entity" με id "cameraRig" έχει δημιουργηθεί με σκοπό το entity να είναι clickable. Κάτι που βοηθά στο κομμάτι της εργασίας που αφορά το να κλικάρω για να εμφανίζει/εξαφανίζει κείμενο κλπ. 
 
-#### Σημείωση 1: Επιπλέον, μπορούμε να δούμε πως στα "a-entity", "a-text" και "a-image" (που αφορούν το Animartion, text και image) υπάρχουν classes με όνομα "click" και "clickable". Βρίσκονται εκεί επειδή "συνδέονται" με το script που είναι υπεύθυνο για το click event. Θα μιλήσω αναλυτικότερα για αυτό το script παρακάτω. 
+#### Σημείωση 2: Επιπλέον, μπορούμε να δούμε πως στα "a-entity", "a-text" και "a-image" (που αφορούν το Animartion, text και image) υπάρχουν classes με όνομα "click" και "clickable". Βρίσκονται εκεί επειδή "συνδέονται" με το script που είναι υπεύθυνο για το click event. Θα μιλήσω αναλυτικότερα για αυτό το script παρακάτω. 
 
-#### Σημείωση 2: Το animation είναι φτιαγμένο με το Blender. Για να δουλέψει χρειάστηκε το συγκεκριμένο script, το οποίο παρατήρησα πως χρησιμοποιείται εδώ: [A-frame pause/play animation mixer](https://stackoverflow.com/questions/70735151/a-frame-pause-play-animation-mixer)
+#### Σημείωση 3: Το animation είναι φτιαγμένο με το Blender. Για να δουλέψει χρειάστηκε το συγκεκριμένο script, το οποίο παρατήρησα πως χρησιμοποιείται εδώ: [A-frame pause/play animation mixer](https://stackoverflow.com/questions/70735151/a-frame-pause-play-animation-mixer)
  ![ScreenShot](animation_script.jpg)
 
-
-Έχοντας πλέον έτοιμο το μοντέλο με το κείμενο και την εικόνα, έμενε να γράψω το script για το click event. Δηλαδή, όταν κλικάρω πάνω στο μοντέλο να εμφανίζεται/εξαφανίζεται το κείμενο και η εικόνα. Αυτό το κατάφερα ύστερα από μελέτη του κώδικα του [salty-partner-1](https://glitch.com/~salty-partner-1) 
+Έχοντας πλέον έτοιμο το μοντέλο, το κείμενο και την εικόνα, έμενε να γράψω το script για το click event. Δηλαδή, όταν κλικάρω πάνω στο μοντέλο να εμφανίζεται/εξαφανίζεται το κείμενο και η εικόνα. Αυτό το κατάφερα ύστερα από μελέτη του κώδικα του [salty-partner-1](https://glitch.com/~salty-partner-1) 
+ ![ScreenShot](script_for_click_event.jpg)
+ 
+ Τέλος, το μόνο που έμενε να κάνω ήταν να καλέσω το script στην html για να είναι όντως clickable το μοντέλο και να εμφανίζονται το text και image. 
+ ![ScreenShot](call_click_script.jpg)
+ 
+Και κάπως έτσι, το παραδοτέο ολοκληρώθηκε και πλέον μπορώ να απολαύσω το τελικό αποτέλεσμα!
+ ![Alt Text](https://github.com/dpsd19080/Augmented-Reality/blob/main/my_report/spidey_final.gif) 
+ 
  
 
 # Conclusions
